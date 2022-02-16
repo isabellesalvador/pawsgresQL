@@ -146,4 +146,14 @@ age INT
 //query
 const queryStr = `INSERT INTO heroes (login, password, fullName, birthdate, powers, age) VALUES ('tony', '1234' ,'Tony Stark', '1996-03-27', 'React,Redux,Express', 25 )`;
 
+CREATE TABLE pet (
+\_id SERIAL PRIMARY KEY,
+name VARCHAR(20) UNIQUE NOT NULL,
+breed VARCHAR(20) UNIQUE NOT NULL,
+color VARCHAR(20),
+age INT,
+check_in VARCHAR(20),
+check_out VARCHAR(20)
+);
+
 \*/

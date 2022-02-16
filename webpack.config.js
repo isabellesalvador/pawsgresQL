@@ -41,5 +41,9 @@ module.exports = {
     proxy: {
       '/api': 'http://localhost:3000' //requests from front end get rerouted to backend 
     }
-  }
+  },
+  resolve: {
+    // Enable importing JS / JSX files without specifying their extension
+    extensions: ['.js', '.jsx'],
+  },
 };

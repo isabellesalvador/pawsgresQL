@@ -1,7 +1,7 @@
 const path = require('path');
 const express = require('express');
 const app = express();
-const apiRouter = require('./router');
+const router = require('./router');
 const { Console } = require('console'); //i didn't put this here?
 const PORT = 3000;
 
@@ -13,10 +13,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.resolve(__dirname, '../client')));
 
 //define route hanlders
-app.use('/', apiRouter);
+app.use('/', router);
 
 //catch-all route handler for requests to unknown route => necessary?
-app.use('*', (req, res) => {
+app.use('/', (req, res) => {
   res.status(404).send('Sorry you seem lost.  Please make your way back to our homepage!')
 });
 

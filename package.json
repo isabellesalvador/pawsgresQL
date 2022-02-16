@@ -4,8 +4,8 @@
   "description": "Convert all your recipes into a uniform unit of measurement (grams).",
   "main": "app.js",
   "scripts": {
-    "start": "concurrently cross env NODE_ENV=production node server/server.js", 
-    "build": "webpack", 
+    "start": "concurrently cross env NODE_ENV=production node server/server.js",
+    "build": "webpack",
     "dev": "concurrently \"NODE_ENV=development nodemon server/server.js\" \"NODE_ENV=development webpack serve\""
   },
   "repository": {
@@ -27,6 +27,7 @@
   "dependencies": {
     "express": "^4.17.2",
     "node-fetch": "^3.2.0",
+    "pg": "^8.7.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-hot-loader": "^4.13.0",

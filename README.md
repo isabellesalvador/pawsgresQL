@@ -131,3 +131,19 @@ p tag recipeName
 "url-loader": "^4.1.1",
 "webpack-hot-middleware": "^2.24.3"
 }
+
+/\*
+CREATE TABLE heroes (
+\_id SERIAL PRIMARY KEY,
+login VARCHAR(50) UNIQUE NOT NULL,
+password VARCHAR(50) UNIQUE NOT NULL,
+fullName VARCHAR(50),
+birthdate VARCHAR,
+powers VARCHAR(50),
+age INT
+);
+
+//query
+const queryStr = `INSERT INTO heroes (login, password, fullName, birthdate, powers, age) VALUES ('tony', '1234' ,'Tony Stark', '1996-03-27', 'React,Redux,Express', 25 )`;
+
+\*/

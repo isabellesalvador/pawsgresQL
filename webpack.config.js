@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: process.env.NODE_ENV, //to switch from production to development later in packpage.json
-  entry: path.join(__dirname, './client/app.js'), //starting point of app should be top most level
+  entry: path.join(__dirname, './client/index.js'), //starting point of app should be top most level
   output: {
     filename: 'build.js', //used for file type
     path: path.resolve(__dirname, 'build'), //creates a folder. if no path defaults to 'dist'
@@ -23,7 +23,7 @@ module.exports = {
         test: /\.css$/i,
         exclude: /node_modules/,
         use: ["style-loader", "css-loader"],
-      }, 
+      },
     ]
   }, 
   plugins: [

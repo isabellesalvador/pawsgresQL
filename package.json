@@ -4,7 +4,7 @@
   "description": "Convert all your recipes into a uniform unit of measurement (grams).",
   "main": "app.js",
   "scripts": {
-    "start": "concurrently cross env NODE_ENV=production node server/server.js",
+    "start": "concurrently \"NODE_ENV=production node server/server.js\"",
     "build": "webpack",
     "dev": "concurrently \"NODE_ENV=development nodemon server/server.js\" \"NODE_ENV=development webpack serve\""
   },
@@ -48,7 +48,6 @@
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.28.0",
-    "file-loader": "^6.2.0",
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
     "nodemon": "^2.0.15",

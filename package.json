@@ -1,7 +1,7 @@
 {
-  "name": "Mise",
+  "name": "pawsgresq",
   "version": "1.0.0",
-  "description": "Convert all your recipes into a uniform unit of measurement (grams).",
+  "description": "Check in your pets to pawsgresql knowing that while you're on vacation your pets are too.",
   "main": "app.js",
   "scripts": {
     "start": "concurrently \"NODE_ENV=production node server/server.js\"",
@@ -12,12 +12,6 @@
     "type": "git",
     "url": "git+https://github.com/isabellesalvador/solo-project.git"
   },
-  "keywords": [
-    "baking",
-    "cooking",
-    "recipes",
-    "recipeConversions"
-  ],
   "author": "Isabelle Salvador",
   "license": "ISC",
   "bugs": {
@@ -25,14 +19,27 @@
   },
   "homepage": "https://github.com/isabellesalvador/solo-project#readme",
   "dependencies": {
+    "assert": "^2.0.0",
+    "buffer": "^6.0.3",
+    "console-browserify": "^1.2.0",
+    "cors": "^2.8.5",
     "express": "^4.17.2",
+    "https-browserify": "^1.0.0",
     "node-fetch": "^3.2.0",
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.1",
     "pg": "^8.7.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-hook-form": "^7.27.0",
     "react-hot-loader": "^4.13.0",
     "react-router": "^6.2.1",
-    "react-router-dom": "^6.2.1"
+    "react-router-dom": "^6.2.1",
+    "stream-http": "^3.2.0",
+    "tty-browserify": "^0.0.1",
+    "url": "^0.11.0",
+    "util": "^0.12.4",
+    "vm-browserify": "^1.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.17.3",

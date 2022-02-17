@@ -8,8 +8,6 @@ const pool= new Pool({
   connectionString: PG_URI,
 });
 
-//notes about the database
-
 //export query
 module.exports = {
   query: (text, params, callback) => {

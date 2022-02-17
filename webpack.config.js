@@ -37,7 +37,7 @@ module.exports = {
       publicPath: '/build',
       directory: path.resolve(__dirname, 'build')
     },
-    port: 8080, //client server
+    // port: 8080, //client side
     proxy: {
       '/api': 'http://localhost:3000' //requests from front end get rerouted to backend 
     }
@@ -45,5 +45,25 @@ module.exports = {
   resolve: {
     // Enable importing JS / JSX files without specifying their extension
     extensions: ['.js', '.jsx'],
+    fallback: { 
+      "url":  require.resolve("url/"), 
+      "http": require.resolve("stream-http"),
+      "https": require.resolve("https-browserify"),
+      "util": require.resolve("util/"),
+      "vm": require.resolve("vm-browserify"),
+      "console": require.resolve("console-browserify"),
+      "tty": require.resolve("tty-browserify"),
+      "buffer": require.resolve("buffer/"),
+      "assert": require.resolve("assert/"),
+
+      // "os": require.resolve("os-browserify/browser"),
+      "os": false,
+      // "path": require.resolve("path-browserify"),
+      "path": false,
+      //when fs is commented out get 5 errors saying fs cant be resolved in node modules.  when i comment back in just get 'Critical dependency: require function is used in a way in which dependencies cannot be statically extracted'
+      "fs": false,
+      //try uninstalling all of them from dependencies to dev dependencies?
+    },
+    
   },
 };

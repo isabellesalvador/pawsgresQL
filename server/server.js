@@ -4,10 +4,12 @@ const app = express();
 const router = require('./router');
 const { Console } = require('console'); //i didn't put this here?
 const PORT = 3000;
+const cors = require('cors');
 
 //parsing request body
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors);
 
 //serve static files
 app.use(express.static(path.resolve(__dirname, '../client')));
@@ -16,7 +18,7 @@ app.use(express.static(path.resolve(__dirname, '../client')));
 app.use('/', router);
 
 //catch-all route handler for requests to unknown route => necessary?
-app.use('/', (req, res) => {
+app.use('*', (req, res) => {
   res.status(404).send('Sorry you seem lost.  Please make your way back to our homepage!')
 });
 

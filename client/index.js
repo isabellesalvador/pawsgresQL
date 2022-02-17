@@ -14,18 +14,3 @@ render(
   );
   
   
-  
-  // import React, { Component } from 'react';
-  // import ReactDOM from 'react-dom';
-  // //import components
-  
-  // class App extends Component {
-  //   render(){
-  //     return (
-  //       <div>
-  //         {/* might want to change the name? */}
-  //         <getPetInfo />
-  //       </div>
-  //     );
-  //   }
-  // }

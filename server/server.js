@@ -9,7 +9,7 @@ const cors = require('cors');
 //parsing request body
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors);
+app.use(cors());
 
 //serve static files
 app.use(express.static(path.resolve(__dirname, '../client')));

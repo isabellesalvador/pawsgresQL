@@ -23,12 +23,3 @@ router.post('/addPet', controller.addPet, (req, res) => {
 
 module.exports = router;
 
-
-/* 
-router.get('/species',
-  starWarsController.getSpecies,
-  (req, res) => re.status(200).json(...res.locals.spec)
-);
-
-  looking at why the endpoint is /species even if it's not a valid endpoint in localhost 8080
-*/

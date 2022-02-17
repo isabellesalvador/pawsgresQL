@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useForm } from "react-hook-form";
 // import { getHooks } from 'html-webpack-plugin';
 import render from 'react-dom';
+import petContainer from "./petContainer.jsx";
 
 
 function Pets() {
@@ -13,7 +14,7 @@ function Pets() {
   const { register, handleSubmit, errors } = useForm();
 
   const onSubmit = (data) => {
-    console.log('DATA ', data.petName);
+    console.log('DATA ', data);
     fetch('http://localhost:3000/getpet', {
       method: "POST", 
       headers: {
@@ -23,10 +24,9 @@ function Pets() {
     })
     .then(result => console.log(result))
     .then(data => {
-
+      console.log('DATA ', data)
     })
     .catch(err => console.log(err))
-
   }
 
   return (
@@ -43,7 +43,13 @@ function Pets() {
         <p>  </p>
         <input type="submit" />
       </form>
+
+      <div>
+        <petContainer />
+      </div>
     </div>
+
+    
     )
 }
 
